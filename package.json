@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "ssh2": "^1.15.0",
     "ssh2-sftp-client": "^10.0.3"
   }
 }

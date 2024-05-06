@@ -1,0 +1,9 @@
+[{
+    "server_name": "ariana",
+    "host": "34.230.14.152",
+    "port": 22,
+    "creds": {
+        "user": "admin",
+        "privateKey": "D:\\GoRudd\\ssh_keys\\LightsailDefaultKey-us-east-1.pem"
+    }
+}]

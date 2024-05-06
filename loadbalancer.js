@@ -49,6 +49,7 @@ async function findLeastLoadedServer() {
     return leastLoadedServer;
 }
 
-
-
-module.exports = findLeastLoadedServer
+module.exports = async function() {
+    const leastLoadedServer = await findLeastLoadedServer();
+    return leastLoadedServer;
+};

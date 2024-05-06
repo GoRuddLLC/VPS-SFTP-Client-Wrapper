@@ -4,6 +4,6 @@
     "port": 22,
     "creds": {
         "user": "admin",
-        "privateKey": "D:\\GoRudd\\ssh_keys\\LightsailDefaultKey-us-east-1.pem"
+        "privateKey": "C:\\Users\\rsrud\\Downloads\\LightsailDefaultKey-us-east-1.pem"
     }
 }]

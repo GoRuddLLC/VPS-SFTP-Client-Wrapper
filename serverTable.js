@@ -1,8 +1,6 @@
 const { Client } = require('ssh2');
 const fs = require('fs');
 
-const servers = require('./serverData.json');
-
 function executeCommand(server, command, callback) {
     const conn = new Client();
     conn.on('ready', () => {
@@ -51,7 +49,8 @@ function fetchStats(server) {
     });
 }
 
-async function generateStatsTable() {
+async function generateStatsTable(serverDataFilePath) {
+    const servers = require(serverDataFilePath);
     console.log('Server Statistics:');
     for (const server of servers) {
         const stats = await fetchStats(server);
@@ -61,7 +60,8 @@ async function generateStatsTable() {
     }
 }
 
-async function getStatsByIndex(index) {
+async function getStatsByIndex(serverDataFilePath, index) {
+    const servers = require(serverDataFilePath);
     if (index < 0 || index >= servers.length) {
         throw new Error('Invalid index');
     }

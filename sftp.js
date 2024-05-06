@@ -2,9 +2,9 @@ const fs = require('fs');
 const { Client } = require('ssh2');
 const findLeastLoadedServer = require("./loadBalance");
 
-async function uploadZipFile(localFilePath, remoteFilePath) {
+async function uploadZipFile(localFilePath, remoteFilePath, serverDataFilePath) {
     try {
-        const leastLoadedServer = await findLeastLoadedServer();
+        const leastLoadedServer = await findLeastLoadedServer(serverDataFilePath);
         const conn = new Client();
         
         conn.on('ready', () => {
@@ -36,4 +36,4 @@ async function uploadZipFile(localFilePath, remoteFilePath) {
     }
 }
 
-module.exports = uploadZipFile
+module.exports = uploadZipFile;

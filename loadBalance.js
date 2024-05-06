@@ -1,8 +1,6 @@
 const { Client } = require('ssh2');
 const fs = require('fs');
 
-const servers = require('./serverData.json');
-
 function executeCommand(server, command, callback) {
     const conn = new Client();
     conn.on('ready', () => {
@@ -34,7 +32,8 @@ async function getCPUUsage(server) {
     });
 }
 
-async function findLeastLoadedServer() {
+async function findLeastLoadedServer(serverDataFilePath) {
+    const servers = require(serverDataFilePath);
     let leastLoadedServer = null;
     let minCPU = Infinity;
     

@@ -2,5 +2,27 @@
   "dependencies": {
     "ssh2": "^1.15.0",
     "ssh2-sftp-client": "^10.0.3"
+  },
+  "name": "@gorudd/vps-sftp-lb",
+  "description": "The sole intent of this repository is to create a loadbalancer and SFTP to establish the connection between our GoRudd web server to a VPS for our React Expo building service via SSH2.",
+  "version": "1.0.0",
+  "main": "libWrapper.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "GoRudd.com",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoRuddLLC/VPS-SFTP-Client-Wrapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GoRuddLLC/VPS-SFTP-Client-Wrapper/issues"
+  },
+  "homepage": "https://github.com/GoRuddLLC/VPS-SFTP-Client-Wrapper#readme",
+  "publishConfig": {
+    "@gorudd:registry": "https://npm.pkg.github.com"
   }
 }

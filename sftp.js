@@ -1,6 +1,6 @@
 const fs = require('fs');
 const { Client } = require('ssh2');
-const findLeastLoadedServer = require("./loadbalancer");
+const findLeastLoadedServer = require("./loadBalance");
 
 async function uploadZipFile(localFilePath, remoteFilePath) {
     try {
@@ -36,8 +36,4 @@ async function uploadZipFile(localFilePath, remoteFilePath) {
     }
 }
 
-// Usage example
-const localFilePath = 'D:\\GoRudd\\git\\VPS-SFTP-Client-Wrapper\\__tests__\\test2.zip';
-const remoteFilePath = '/home/admin/SFTP/file.zip';
-
-uploadZipFile(localFilePath, remoteFilePath);
+module.exports = uploadZipFile

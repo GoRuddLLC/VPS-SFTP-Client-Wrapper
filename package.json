@@ -5,7 +5,7 @@
   },
   "name": "@gorudd/vps-sftp-lb",
   "description": "The sole intent of this repository is to create a loadbalancer and SFTP to establish the connection between our GoRudd web server to a VPS for our React Expo building service via SSH2.",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "libWrapper.js",
   "devDependencies": {},
   "scripts": {
